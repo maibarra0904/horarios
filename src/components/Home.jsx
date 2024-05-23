@@ -92,7 +92,7 @@ const Home = () => {
         <>
             <div className=" flex flex-col container mx-auto py-8">
                 <h1 className="flex justify-center items-center text-2xl font-bold mb-4">Verificación de Horarios para Sustentaciones</h1>
-                <div className="mb-4 flex gap-10">
+                <div className="mb-4 flex flex-col sm:flex-row gap-10">
                     <div className="flex flex-col">
                         <label htmlFor="teacher-select" className="mr-2">Selecciona al Presidente:</label>
                         <select
@@ -164,7 +164,7 @@ const Home = () => {
                         No hay coincidencias en horarios de otras actividades para los docentes seleccionados
                     </div>
                 }
-                <table className="border-collapse">
+                <table className="border-collapse min-w-20">
                     <thead>
                         <tr>
                             <th className="border w-36 px-4 py-2 bg-blue-200">Hora</th>
@@ -178,7 +178,7 @@ const Home = () => {
                     <tbody>
                         {data[0].hours.map((hour, hourIndex) => (
                             <tr key={hourIndex}>
-                                <td className="border px-4 py-2 w-36 bg-blue-200">{hour.time}</td>
+                                <td className="border px-4 py-2 w-36 min-w-16 bg-blue-200">{hour.time}</td>
                                 {data.map((day, dayIndex) => (
                                     <td
                                         key={dayIndex}
