@@ -91,10 +91,10 @@ const Home = () => {
     return (
         <>
             <div className=" flex flex-col container mx-auto py-8">
-                <h1 className="flex justify-center items-center text-2xl font-bold mb-4">Verificación de Horarios para Sustentaciones</h1>
-                <div className="mb-4 flex flex-col sm:flex-row gap-10">
+                <h1 className="flex justify-center items-center text-2xl font-bold mb-4 px-2">Verificación de Horarios para Sustentaciones</h1>
+                <div className="mb-4 grid-cols-1 sm:flex p-2 sm:gap-10">
                     <div className="flex flex-col">
-                        <label htmlFor="teacher-select" className="mr-2">Selecciona al Presidente:</label>
+                        <label htmlFor="teacher-select" className="mr-2">Presidente:</label>
                         <select
                             id="teacher-select"
                             value={presidente}
@@ -114,7 +114,7 @@ const Home = () => {
                         presidente !== '' && (
                             <>
                                 <div className="flex flex-col">
-                                    <label htmlFor="teacher-select" className="mr-2">Selecciona al Examinador Principal:</label>
+                                    <label htmlFor="teacher-select" className="mr-2">Examinador Principal:</label>
                                     <select
                                         id="teacher-select"
                                         value={principal}
@@ -137,7 +137,7 @@ const Home = () => {
                         principal !== '' && (
                             <>
                                 <div className="flex flex-col">
-                                    <label htmlFor="teacher-select" className="mr-2">Selecciona al Examinador Suplente:</label>
+                                    <label htmlFor="teacher-select" className="mr-2">Examinador Suplente:</label>
                                     <select
                                         id="teacher-select"
                                         value={suplente}
